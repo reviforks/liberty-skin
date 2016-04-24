@@ -20,10 +20,58 @@
 	"ResourceModules": {
 		"skins.liberty.styles": {
 			"styles": {
-				"main.css": {
-					"media": "screen"
+				"css/font/Nanum Gothic.css": {
+					"media": "all"
+				},
+				"css/font/Noto Sans KR.css": {
+					"media": "all"
+				},
+				"bootstrap/css/bootstrap.min.css": {
+					"media": "all"
+				},
+				"css/default.css": {
+					"media": "all"
+				},
+				"css/default_mobile.css": {
+					"media": "all"
+				},
+				"css/wiki.css": {
+					"media": "all"
+				},
+				"css/only-mw.css": {
+					"media": "all"
+				},
+				"css/wiki-table.css": {
+					"media": "all"
+				},
+				"css/wikiedittor-liberty.css": {
+					"media": "all"
 				}
-			}
+			},
+			"position": "bottom"
+		},
+
+		"skins.liberty.bootstrap": {
+			"scripts": [
+				"js/lib/jquery.ba-throttle-debounce.js",
+				"js/lib/jquery.cookie.js",
+				"js/lib/jquery.min.js",
+				"js/lib/bootstrap.min.js"
+			],
+			"position": "bottom"
+		},
+
+		"skins.liberty.layoutjs": {
+			"scripts": [
+				"js/login_request.js",
+				"js/live_Recents.js",
+				"js/index_botton.js",
+				"js/delay_scrolling.js",
+				"js/notice_view.js",
+				"js/sns_button.js",
+				"js/layout.js"
+			],
+			"position": "bottom"
 		}
 	},
 	"ResourceFileModulePaths": {
