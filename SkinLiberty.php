@@ -22,14 +22,22 @@ class SkinLiberty extends SkinTemplate {
 		//윈도우 폰
 		$out->addMeta('msapplication-navbutton-color', '#4188F1'); 
 		
-		//트위터 카드 시작
+		/* OpenGraph */
+		$out->addMeta('og:title', $this->getSkin()->getTitle());
+		$out->addMeta('og:description', strip_tags($out->mBodytext),'<br>');
+		$out->addMeta('og:image','https://librewiki.net/skins/Liberty/img/logo.png' );
+		$out->addMeta('og:locale', 'ko_KR' );
+		$out->addMeta('og:site_name', 'Librewiki' );
+		$out->addMeta('og:url', Title::newFromText("Title")->getFullURL() );
+		
+		/* 트위터 카드 */
 		$out->addMeta('twitter:card', 'summary');
 		$out->addMeta('twitter:site', '@librewiki');
 		$out->addMeta('twitter:title', $this->getSkin()->getTitle() );
-		$out->addMeta('twitter:description', $out->mBodytext );
+		$out->addMeta('twitter:description', strip_tags($out->mBodytext),'<br>' );
 		$out->addMeta('twitter:creator', '@librewiki');
 		$out->addMeta('twitter:image', 'https://librewiki.net/skins/Liberty/img/logo.png');
-		//트위터 카드 완료
+		
 		
 		
         $out->addModuleScripts( array(
