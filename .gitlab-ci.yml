@@ -1,6 +1,8 @@
 stages:
   - lint
 
+after_script: bash <(curl -s https://codecov.io/bash) -t 63f3e39b-c5de-4149-87c7-01c8fbba8d62
+
 eslint:
   image: node:latest
   stage: lint
