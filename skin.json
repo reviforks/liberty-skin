@@ -51,6 +51,9 @@
 				},
 				"css/print.css": {
 					"media": "print"
+				},
+				"css/special.css": {
+					"media": "all"
 				}
 			}
 		},

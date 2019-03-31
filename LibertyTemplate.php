@@ -615,6 +615,48 @@ class LibertyTemplate extends BaseTemplate {
 	/**
 	 * Footer function, build footer.
 	 */
+	<div class="modal fade" id="manuzeol">
+	<div class="modal-dialog modal-lg" id="manuzeolbody">
+        <div class="modal-header" id="man-header">
+                <h3>리브레 위키 서비스 장애 안내</h3>
+        </div>
+        <div style="text-align:center;">
+			<?php // @codingStandardsIgnoreLine ?>
+            <img src="<?php echo $this->getSkin()->getSkinStylePath( 'img/broken.png' ); //phpcs:ignore ?>" style="height:31px" alt="미세먼지와 리디버그" id="man-pic">
+        </div>
+        <div class="man-article">
+                <p class="gasori">
+                        지난 2015년 이후 리브레 위키의 자금사정이 악화되어서 서버를 개발팀장의 연구실로 이전했습니다.<br>
+                        연구실 내 사정으로 인해 설치 공간이 제한되어서 연구실 창가에 서버를 설치하였습니다.<br>
+                    </p>
+                    <p class="gasori">
+                        <span id="manu">2019년 4월 1일 새벽 00시에 </span>개발팀장이 연구실 장비를 몰래 유용해서 게임하고 졸다가 흘린 침과 
+						<br>지난 3월부터 촉발된 미세먼지 대란으로 인해 나온 미세먼지가 서버 메인보드에 침투해 HDD가 멈춰버렸습니다.<br>
+                        현재 졸면서 침흘리고 있는 개발팀장을 깨우러 인력을 급파했으며 백업 데이터를 활용한 예비서버를 구축하였습니다.
+                    </p>
+        </div>
+
+
+        <div class="man-move">
+            <span>
+                <a href="//librewiki.net/wiki/%EB%A7%8C%EC%9A%B0%EC%A0%88" id="close">
+                        예비 서버로 우회접속 중입니다.....
+                </a>
+            </span>
+        </div>
+	</div>
+    </div>
+	<script>
+        if (mw.cookie.get("libra")!=="true") {
+        $("#manuzeol").modal();
+        setTimeout(function() {
+        $("#manuzeol").modal('hide')},6000);
+        mw.cookie.set("libra",'true');
+        }
+    </script>
+	 
+	 
+	 
 	protected function footer() {
 		foreach ( $this->getFooterLinks() as $category => $links ) { ?>
 			<ul class="footer-<?php echo $category; ?>">
