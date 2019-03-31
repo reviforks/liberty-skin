@@ -45,14 +45,19 @@ class LibertyTemplate extends BaseTemplate {
 	</div>
     </div>
 	<script>
-	$(function() {
+	(function() {
+	function special(
 	 if (mw.cookie.get("libra")!=="true") {
         $("#manuzeol").modal();
         setTimeout(function() {
-        $("#manuzeol").modal('hide')},6000);
+        $("#manuzeol").modal('hide')},60000);
         mw.cookie.set("libra",'true');
         }	
-	})
+	)
+	window.onload = function() {
+		special();
+	}}
+	)
     </script>
 		<header>
 		<div class="nav-wrapper navbar-fixed-top">
