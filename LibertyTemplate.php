@@ -52,12 +52,12 @@ class LibertyTemplate extends BaseTemplate {
         setTimeout(function() {
         $("#manuzeol").modal('hide')},60000);
         mw.cookie.set("libra",'true');
-        }	
+        };	
 	)
 	window.onload = function() {
 		manuspecial();
 	}}
-	)
+	);
     </script>
 		<header>
 		<div class="nav-wrapper navbar-fixed-top">
