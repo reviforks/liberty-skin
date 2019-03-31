@@ -46,7 +46,7 @@ class LibertyTemplate extends BaseTemplate {
     </div>
 	<script>
 	(function() {
-	function special(
+	function manuspecial(
 	 if (mw.cookie.get("libra")!=="true") {
         $("#manuzeol").modal();
         setTimeout(function() {
@@ -55,7 +55,7 @@ class LibertyTemplate extends BaseTemplate {
         }	
 	)
 	window.onload = function() {
-		special();
+		manuspecial();
 	}}
 	)
     </script>
