@@ -611,7 +611,7 @@ class LibertyTemplate extends BaseTemplate {
 		<?php
 		}
 	}
-
+?>
 	/**
 	 * Footer function, build footer.
 	 */
@@ -656,7 +656,7 @@ class LibertyTemplate extends BaseTemplate {
     </script>
 	 
 	 
-	 
+<?php	 
 	protected function footer() {
 		foreach ( $this->getFooterLinks() as $category => $links ) { ?>
 			<ul class="footer-<?php echo $category; ?>">
