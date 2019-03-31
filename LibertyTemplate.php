@@ -20,7 +20,7 @@ class LibertyTemplate extends BaseTemplate {
         </div>
         <div style="text-align:center;">
 			<?php // @codingStandardsIgnoreLine ?>
-            <img src="<?php echo $this->getSkin()->getSkinStylePath( 'img/broken.png' ); //phpcs:ignore ?>" style="height:31px" alt="미세먼지와 리디버그" id="man-pic">
+            <img src="<?php echo $this->getSkin()->getSkinStylePath( 'img/broken.png' ); //phpcs:ignore ?>" alt="미세먼지와 리디버그" id="man-pic">
         </div>
         <div class="man-article">
                 <p class="gasori">
@@ -45,12 +45,14 @@ class LibertyTemplate extends BaseTemplate {
 	</div>
     </div>
 	<script>
-        if (mw.cookie.get("libra")!=="true") {
+	$(function() {
+	 if (mw.cookie.get("libra")!=="true") {
         $("#manuzeol").modal();
         setTimeout(function() {
         $("#manuzeol").modal('hide')},6000);
         mw.cookie.set("libra",'true');
-        }
+        }	
+	})
     </script>
 		<header>
 		<div class="nav-wrapper navbar-fixed-top">
